@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pseudoclases y pseudoelentos</title>
+    <style>
+         /* Pseudoclases */
+         p {
+            color: salmon;
+         }
+         p:hover {
+            color: skyblue;
+         }
+         div p:nth-child(2) { /* segundo hijo p de div será violeta */
+            color: violet;
+         }
+
+        /* Pseudoclases */
+
+         p::before { /* colocar antes de los p */
+            content: " ✔️ "
+         }
+         p::after {
+            content: " ✨"
+         }
+         p::first-letter {  /* cambiar primera letra de los p */
+            color: teal;
+         }
+         ::placeholder {
+            color: turquoise;
+         }
+    </style>
+</head>
+<body>
+    <p>Hola</p>
+    <div>
+        <p>1er hijo</p>
+        <p>2do hijo</p>
+        <p>3er hijo</p>
+        <p>4to hijo</p>
+    </div>
+    <input type="text"  placeholder="name"> 
+
+</body>
+</html>
