@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        /* Selectores básicos */
+        * {
+            box-sizing: border-box;
+            background: lightcyan;
+        }
+        div {
+            font-size: 24px;
+            text-align: center;
+            background: pink;
+        }
+        .titulo {
+            color: blue;
+        }
+        #titulo2 {
+            color: red;
+        }
+        a[href="https://www.pexels.com/es-es/buscar/cats/"]{
+            text-decoration: none;
+            color: orangered;
+        }
+        /* Selectores combinadores */
+
+        div p { /* Todos los descendientes de p (hijos, nietos, etc.) */
+            color: Lime;
+        }
+        div > div { /* Descendiente directo de div (solo hijos) */
+            background: plum;
+        }
+        div .rojo {
+            background: red;
+        }
+        p + p { /* El section que esté justo seguido de un div */
+            text-align: right;
+        }
+        div ~ p {/* Hermanos que estés seguidos de un div (todos los p). alt + ñ para símbolo "~" */
+            background: plum;
+        }
+    </style>
+</head>
+<body>
+    <div class="titulo">Hola</div>
+    <div>Mundo</div>
+    <div id ="titulo2">CSS</div>
+    <a href="https://www.pexels.com/es-es/buscar/cats/">Ver gatos</a>
+
+    <!-- Selectores combinadores -->
+     <div>
+        <span class="rojo">Tengo fondo rojo</span>
+        <section>No tengo fondo rojo</section>
+    </div>
+
+    <span class="rojo">No tengo fondo rojo</span>
+
+    <div>
+        <p>Soy un p</p>
+        <p>Estoy alineado a la derecha (voy seguido de un p)</p>
+     </div>
+     
+     <p>Soy hermano de un div (fondo rosa)</p>
+     <p>Soy hermano de un div (fondo rosa) Y estoy alineado a la derecha (voy seguido de un p)</p>
+</body>
+</html>
+
