@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    /* CSS Grid */
+    .container {
+        display: grid;
+        width: 400px;
+        height: 400px;
+        background: papayawhip;
+        grid-template-columns: 1fr 1fr 1fr 1fr; /* repeat(4, 1fr); */
+        grid-template-rows: 1fr 1fr 1fr 1fr;
+    }
+    .item {
+        background: pink;
+    }
+     /* Podemos colocar los items donde queramos en el grid creado.
+     Tenemos que indicarle en qué fila y columna empieza y acaba cada uno
+     Los elementos que no se indiquen, se irán poniendo el en primer espacio libre */
+    .container .item:nth-child(1) { /* El item 1 lo coloca en la primera casilla del grid*/
+        grid-column: 1 / 2;   /* Que empiece a contar en la línea 1 y 2 */
+    }
+    .container .item:nth-child(2) { /* el item 2 está en la casilla 2-2 */
+        grid-column: 2 / 3; /* Que empiece en la línea 2 y termine en la 3 */
+        grid-row: 2 / 3;    /* Que empiece en la columna 2 y termine en la 3 */
+    }
+    .container .item:nth-child(3) { /* el item 2 está en la casilla 2-2 */
+        grid-column: 3 / 4; /* Que empiece en la línea 2 y termine en la 3 */
+        grid-row: 3 / 4;    /* Que empiece en la columna 2 y termine en la 3 */
+    }
+    .container .item:nth-child(4) { /* el item 2 está en la casilla 2-2 */
+        grid-column: 4 / 5; /* Que empiece en la línea 2 y termine en la 3 */
+        grid-row: 4 / 5;    /* Que empiece en la columna 2 y termine en la 3 */
+    }
+</style>
+<body>
+    <div class="container">
+        <div class="item"></div>
+        <div class="item"></div>
+        <div class="item"></div>
+        <div class="item"></div>
+    </div>
+</body>
+</html>
+
+
+
+

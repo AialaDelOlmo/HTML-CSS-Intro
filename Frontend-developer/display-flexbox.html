@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Display - Flexbox</title>
+</head>
+<style>
+ 
+    /* Flexbox */
+    .container {
+        display: flex;
+        background: papayawhip; 
+        /* justify-content: space-between; */
+        justify-content: center;
+        /* align-items: center; */
+        flex-direction: column;  /* Por defecto es row, forzamos a column */
+        height: 200px;
+    }
+    .item {
+        width: 30px;
+        height: 30px;
+        background: purple;
+    }
+    .container .item:nth-child(2n+1) {  /* Todos los elementos impares */
+        background-color: azure;
+    }
+
+   
+</style>
+<body>
+    <div class="container">
+        <div class="item"></div>
+        <div class="item"></div>
+        <div class="item"></div>
+        <div class="item"></div>
+        <div class="item"></div>
+    </div>
+</body>
+</html>
