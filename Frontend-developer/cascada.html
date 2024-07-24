@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cascada y Especificidad</title>
+</head>
+<style>
+    /* Cascada */
+    h1 {
+        color:red;
+    }
+    h1 {
+        color: blue; 
+    }
+
+    /* Especificidad */
+    #especificidad {
+        color: green;
+        font-size: 24px;
+    }
+    .master {
+        color: yellow;
+        font-size: 18px;
+    }
+    
+</style>
+<body>
+    <h1>Funcionamiento de cascada: el órden de los estilos es importante, las reglas de más abajo sobreescriben las anteriores.</h1>
+    <div id="especificidad" class="master">El id tiene mayour especificidad que la clase</div>
+</body>
+</html>
