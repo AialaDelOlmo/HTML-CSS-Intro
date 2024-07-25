@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Modelo de caja</title>
+    <style>
+        div {
+            width: 200px; /* Content de 200 x 200 */
+            height: 200px;
+            background: plum;
+            padding: 20px; /* Ahora el elemento medirá 200px + 20px + 20 en cada lado (240px) */
+            /* Comentando el box-sizing tendríamos una caja de 200 + 20 + 20 + 2 = 242px; */
+            box-sizing: border-box; /* Para que no sume el padding, que en total mida 200 x 200. Resta lo del padding, es decir, 200px - 20 - 20 = 160 x 160 */
+            border: 1px solid darkgray; /* se resta al contenido otros 2 px (158) */
+            /* margin da una separación entre diferentes elementos */
+            margin: 20px; /* Los márgenes entre los elelmentos se solapan, se quedarían a 20px, no a 40px*/
+        }
+
+        /* si los elementos están en un contenedor Flexbox o grid, no se colapsarían los márgenes */
+        .FlexContainer {
+            display: flex;
+            flex-direction: column;
+        }
+
+        .GridContainer {
+            display: grid;
+            flex-direction: column;
+        }
+    </style>
+</head>
+<body>
+    <div>Modelo</div>
+    <div>de </div>
+    <div>caja</div>
+
+    <section class="FlexContainer">
+        <div>Modelo</div>
+        <div>de </div>
+        <div >caja</div>
+    </section>
+
+    <section class="GridContainer">
+        <div>Modelo</div>
+        <div>de </div>
+        <div>caja</div>
+    </section>
+</body>
+</html>
