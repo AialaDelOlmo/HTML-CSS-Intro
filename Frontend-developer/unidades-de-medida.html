@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Unidades de medida</title>
+    <style>
+        html {
+            /*font-size: 100%;  = 1rem = 16 px */
+            /* Si 16px = 100% entonces 10px = 62.5% (regla de tres) */
+            font-size: 62.5%; 
+        }
+        body {
+            margin: 0;
+        }
+        div {
+            width: 100px;
+            height: 100px;
+            background: pink;
+           
+        }
+        p {
+            font-size: 3rem  /* Estableciendo el font-size: 62.5%, sabemos que 3rem = 3*10 = 30px  */
+        }
+        .container {
+            width: 100vw;
+            height: 100vh;
+            background: plum;
+        }
+    </style>
+</head>
+<body>
+    <div>Si 16px = 100%</div>
+    <div>10px = 62.5%</div>
+    <div class="container">100vw x 100vh (100%)</div>
+</body>
+</html>
