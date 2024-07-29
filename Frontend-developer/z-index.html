@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=, initial-scale=1.0">
+    <title>z-index</title>
+    <style>
+        div {
+            position: absolute;
+            background: palegoldenrod;
+        }
+        .one {
+            z-index: 5;
+        }
+        .two {
+            z-index: 4;
+        }
+        .red {
+            width: 80px;
+            height: 80px;
+            background: red;
+            z-index: 4;
+        }
+        .blue {
+            width: 80px;
+            height: 80px;
+            background: blue;
+            z-index: 3;
+        }
+        .yellow {
+            width: 80px;
+            height: 80px;
+            background: yellow;
+            z-index: 6;
+        }
+    </style>
+</head>
+<body>
+    <div class="one">UNO</div>  <!-- Se mostrará UNO porque tiene mayor z-index -->
+    <div class="two">DOS</div>
+
+    <section>
+        <div class="red">Red</div>
+        <div class="blue">Blue
+            <div class="yellow">Yellow</div> <!-- Yellow tiene el número más grande, pero como es hijo de blue y blue es menor que red, nunca estará por encima de red. -->
+        </div>
+    </section>
+</body>
+</html>
